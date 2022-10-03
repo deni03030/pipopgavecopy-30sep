@@ -37,10 +37,19 @@ async function readPip() {
         // H 
         var avatar = "https://xsgames.co/randomusers/assets/avatars/pixel/" + number + ".jpg"
               
-        // 
+        // Under dette element ligger vores pip-boks, som inkuluderer: knap med dropdown, info om brugeren, besked og dato/tid
         const element = 
         `
+        
         <div class ="pip-boks">
+        <div class="dropdown">
+        <button onclick="openDropdown()" class="dropbtn">Knap</button>
+
+        <div id="myDropdown" class="dropdown-content">
+          <button id="updatepipButton">Rediger pip</button>
+          <button id="deletePip"> Slet pip</button>
+        </div>
+
 
         <div class="bruger">
             <div class="avatar"><img src="${avatar}"
